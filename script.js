@@ -1,5 +1,5 @@
 //your JS code here. If required.
-function displayTimer{
+function displayTimer(){
 	var date=new Date();
 	var time=date.toLocalTimeString();
 	var options={day:'numeric' ,month:'long', year:'numeric'};
