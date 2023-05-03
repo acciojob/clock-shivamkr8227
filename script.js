@@ -9,12 +9,13 @@
 // setInterval(displayTimer, 1000);
 
 const time=new Date();
-let daystring = `${time.getMonth() +1}/${time.getDate}/${time.getFullYear}`;
+let daystring = `${time.getMonth() +1}/${time.getDate()}/${time.getFullYear()}`;
 let hr=time.getHours();
 let timestring="";
 if(hr>=12)
 {
-	timestring=`hr-12: ${time.getMinutes}:${time.getSeconds} PM`;
+	hr=hr-12;
+	timestring=`, ${hr}:${time.getMinutes()}:${time.getSeconds()} PM`;
 }
 else{
 	timestring=`hr: ${time.getMinutes}:${time.getSeconds} AM`;
