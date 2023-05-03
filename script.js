@@ -7,7 +7,8 @@
 // 	document.getElementById("timer").innerHTML=today + time;
 // }
 // setInterval(displayTimer, 1000);
-
+function gettime(){
+	
 const time=new Date();
 let daystring = `${time.getMonth() +1}/${time.getDate()}/${time.getFullYear()}`;
 let hr=time.getHours();
@@ -20,5 +21,11 @@ if(hr>=12)
 else{
 	timestring=`hr: ${time.getMinutes()}:${time.getSeconds()} AM`;
 }
+	return daystring+timestring;
+}
 let ptimer=document.getElementById("timer");
-ptimer.innerText=daystring+timestring;
+function timer(){
+	
+ptimer.innerText=gettime();
+}
+setInterval(timer , 1000);
