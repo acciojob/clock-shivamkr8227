@@ -21,4 +21,4 @@ else{
 	timestring=`hr: ${time.getMinutes()}:${time.getSeconds()} AM`;
 }
 let ptimer=document.getElementById("timer");
-ptimer.innerHTML=daystring+timestring;
+ptimer.innerText=daystring+timestring;
